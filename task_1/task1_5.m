@@ -1,0 +1,10 @@
+x = randn(1, 1000);
+y = x*1.5 + 10;
+indexes = randi(1000, 1, 200);
+independent = normrnd(10,2, [1, 1000]);
+y(indexes) = independent(indexes);
+corr = corrcoef(x, y);
+figure;
+hold on;
+h1 = scatterhist(x, y);
+title('correlation = ' + string(corr(1, 2)));
