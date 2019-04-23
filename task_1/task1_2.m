@@ -13,6 +13,11 @@ for i = 1:length(samplesizes)
 end
 figure;
 hold on;
-h1 = plot(samplesizes, standard_deviations, 'ro');
-h2 = plot(samplesizes, SEM, 'g.');
-print('-dpng','test.png');
+plot(samplesizes, standard_deviations, 'b.');
+% plot(samplesizes, standard_deviations, 'r-');
+plot(samplesizes, SEM, 'ro');
+% plot(samplesizes, SEM, 'g-');
+title('Monte Carlo ');
+xlabel('sample sizes')
+ylabel('values');
+legend('experimental','theoretical');

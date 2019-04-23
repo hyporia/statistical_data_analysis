@@ -3,6 +3,6 @@ figure;
 hold on;
 x=randn(1, N);
 y=randn(1, N);
-h = plot(x, y, 'r.')
+h = scatter(x, y, 'r.')
 CORR = corrcoef(x, y)
-CORR(1, 2)
+title('Correlation coef = ' + string(CORR(1, 2)))
