@@ -1,7 +1,0 @@
-% construct regressor matrix
-X = score1(:);
-X(:,end+1) = 1; % linear
-% construct data vector
-y = score2(:);
-%OLS model
-w = inv(X'*X)*X'*y;
