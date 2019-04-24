@@ -1,6 +1,6 @@
 x = 1:0.1:10;
 % генерируем случайные данные с линейным трендом
-y = 3*x + randn(1,length(x))*3;
+y = 3*x + randn(1,length(x))*2;
 figure; hold on;
 scatter(x, y, 'r.');
 X = x(:);
