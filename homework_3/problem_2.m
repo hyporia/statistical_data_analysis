@@ -14,4 +14,6 @@ ax = axis;
 xx = linspace(ax(1),ax(2),100);
 %polyval(w, xx) computes values of polynom with weights w in points of xx
 plot(xx,polyval(w,xx),'k-');
-title(sprintf('y = %.3f x^2 + %.3f x + %.3f',w(1),w(2),w(3)));
+y_pred = polyval(w,score1(:));
+R2 = computeR2(y_pred, score2(:))
+title(sprintf('y = %.3f x^2 + %.3f x + %.3f\nR2 = %.2f',w(1),w(2),w(3),R2));

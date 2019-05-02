@@ -11,4 +11,6 @@ figure; hold on;
 scatter(score1,score2,'r.');
 ax = axis;
 plot(ax(1:2),w(1)*ax(1:2)+w(2),'k-');
-title(sprintf('y = %.3f x + %.3f',w(1),w(2)));
+y_pred = polyval(w, score1(:));
+R2 = computeR2(y_pred, score2(:))
+title(sprintf('y = %.3f x + %.3f\nR2 = %.2f',w(1),w(2),R2));

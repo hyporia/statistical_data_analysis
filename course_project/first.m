@@ -1,0 +1,14 @@
+figure; hold on;
+data = sortrows([Age SpendingScores], 1);
+x = data(:,1)';
+y = data(:,2)';
+corr = corrcoef(x,y);
+scatterhist(x, y, 'Marker', '+');
+title(sprintf('Correlation coefficient = %.2f', corr(1,2)));
+xlabel('Age');
+ylabel('Spending scores');
+figure;
+scatterhist(x,y,'Kernel','on','Marker','+');
+xlabel('Age');
+ylabel('Spending score');
+title(sprintf('Correlation coefficient = %.2f', corr(1,2)));
